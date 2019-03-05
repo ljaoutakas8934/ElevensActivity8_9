@@ -53,7 +53,6 @@ public class ElevensBoard extends Board {
      */
     @Override
     public boolean isLegal(List<Integer> selectedCards) {
-        return true;
         int k = 0;
         int q = 0;
         int j = 0;

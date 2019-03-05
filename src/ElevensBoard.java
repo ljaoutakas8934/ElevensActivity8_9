@@ -53,8 +53,34 @@ public class ElevensBoard extends Board {
      */
     @Override
     public boolean isLegal(List<Integer> selectedCards) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
         return true;
+        int k = 0;
+        int q = 0;
+        int j = 0;
+        if (selectedCards.size()>3)
+            return false;
+        if (super.cardAt(selectedCards.get(0)).pointValue()+super.cardAt(selectedCards.get(1)).pointValue() == 11)
+            return true;
+        for(int i = 0; i < selectedCards.size(); i++)
+        {
+            if (super.cardAt(selectedCards.get(i)).rank().equals("king"))
+            {
+                k = 1;
+            }
+            if (super.cardAt(selectedCards.get(i)).rank().equals("queen"))
+            {
+                q = 1;
+            }
+            if (super.cardAt(selectedCards.get(i)).rank().equals("jack"))
+            {
+                j = 1;
+            }
+        }
+        if(j == 1 && k == 1 && q == 1)
+        {
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -67,7 +93,20 @@ public class ElevensBoard extends Board {
      */
     @Override
     public boolean anotherPlayIsPossible() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+
+        List<Integer> selectedCards;
+        int i1 = 9;
+
+        for (int i = 0; i < 9; i++)
+        {
+            for (int k = i; k < 9; )
+            {
+                if (cardAt(k) != null)
+                {
+
+                }
+            }
+        }
         return true;
     }
 
